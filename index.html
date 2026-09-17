@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel Scan - Prompt Security</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-left">
+            <i data-lucide="shield-alert" class="header-logo-icon"></i>
+            <h1>Sentinel Scan</h1>
+        </div>
+        <button id="settingsBtn" class="btn btn-icon" title="API Settings">
+            <i data-lucide="settings"></i>
+        </button>
+    </header>
+
+    <main class="app-container">
+        <div class="grid-layout">
+            <!-- Left Column: Input -->
+            <section class="panel input-panel">
+                <div class="panel-header">
+                    <h2>Prompt Input</h2>
+                </div>
+                <div class="presets">
+                    <span class="presets-label">Presets:</span>
+                    <button class="preset-btn" data-type="dan">DAN Jailbreak</button>
+                    <button class="preset-btn" data-type="context">Context Switch</button>
+                    <button class="preset-btn" data-type="leak">System Leak</button>
+                    <button class="preset-btn" data-type="tech">Benign Tech</button>
+                    <button class="preset-btn" data-type="code">Benign Code</button>
+                </div>
+                
+                <div class="textarea-wrapper">
+                    <textarea id="promptInput" placeholder="Enter prompt to analyze for security risks..." spellcheck="false"></textarea>
+                    <div class="textarea-footer">
+                        <div class="metrics">
+                            <span id="charCount">0 chars</span>
+                            <span class="divider">|</span>
+                            <span id="tokenCount">~0 tokens</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="analyzeBtn" class="btn btn-primary btn-full">
+                    <i data-lucide="shield-check"></i>
+                    Analyze Security
+                </button>
+            </section>
+
+            <!-- Right Column: Results -->
+            <section class="panel results-panel">
+                <div id="loadingOverlay" class="loading-overlay hidden">
+                    <div class="spinner"></div>
+                    <p>Analyzing Prompt Security...</p>
+                </div>
+
+                <div id="resultsContent" class="results-content hidden">
+                    <div class="results-header">
+                        <h2>Analysis Report</h2>
+                        <div class="actions">
+                            <button id="exportBtn" class="btn btn-outline btn-sm">
+                                <i data-lucide="download"></i> Export .md
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="score-section">
+                        <div class="score-header">
+                            <span class="score-label">Risk Score</span>
+                            <span class="score-value" id="riskScoreValue">0/100</span>
+                        </div>
+                        <div class="progress-bar-container">
+</body>
+</html>
