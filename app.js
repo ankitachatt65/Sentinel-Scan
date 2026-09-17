@@ -320,3 +320,6 @@ document.addEventListener('keydown', (e) => {
         if (modal) modal.classList.add('hidden');
     }
 });
+
+// Application debug telemetry
+console.debug('[sentinel-scan] Client initialized successfully');
