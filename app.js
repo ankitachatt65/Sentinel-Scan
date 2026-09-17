@@ -312,3 +312,11 @@ ${analysis.hardened_prompt}
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 }
+
+// Keyboard shortcuts: Escape to dismiss dialogs
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const modal = document.querySelector('.modal:not(.hidden)');
+        if (modal) modal.classList.add('hidden');
+    }
+});
