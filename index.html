@@ -17,11 +17,53 @@
         <div class="header-left">
             <i data-lucide="shield-alert" class="header-logo-icon"></i>
             <h1>Sentinel Scan</h1>
+            <span class="header-badge">AI Security Firewall</span>
         </div>
         <button id="settingsBtn" class="btn btn-icon" title="API Settings">
             <i data-lucide="settings"></i>
         </button>
     </header>
+
+    <!-- Hero Showcase Section -->
+    <section class="hero-showcase">
+        <div class="hero-content">
+            <div class="hero-pills">
+                <span class="hero-pill"><i data-lucide="shield-check"></i> Dual-Pipeline Defense</span>
+                <span class="hero-pill"><i data-lucide="scan"></i> Meta Prompt Guard 2 + Qwen 2.5</span>
+                <span class="hero-pill"><i data-lucide="activity"></i> Real-Time Jailbreak Audit</span>
+            </div>
+            <h2 class="hero-title">Automated AI Prompt Security & Threat Firewall</h2>
+            <p class="hero-subtitle">Audit LLM prompts for adversarial jailbreaks, context hijacking, system prompt leakage, and PII exfiltration vulnerabilities with millisecond threat classification and automated prompt hardening.</p>
+        </div>
+
+        <div class="hero-graphic">
+            <svg width="150" height="150" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" class="sentinel-shield-svg">
+                <!-- Outer Hexagonal / Circular Shield -->
+                <polygon points="80,18 136,46 136,114 80,142 24,114 24,46" stroke="url(#sentinel-grad-1)" stroke-width="2.5" fill="none" class="spin-ring" />
+                <polygon points="80,28 126,51 126,109 80,132 34,109 34,51" stroke="url(#sentinel-grad-2)" stroke-width="1.8" stroke-dasharray="6 6" class="spin-ring-rev" />
+                <!-- Center Shield Icon -->
+                <path d="M80 44L110 56V88C110 108 96 122 80 128C64 122 50 108 50 88V56L80 44Z" fill="url(#sentinel-radial)" stroke="#22c55e" stroke-width="2.5" class="pulse-shield" />
+                <path d="M72 84L78 90L92 76" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <!-- Radar sweep line -->
+                <line x1="80" y1="80" x2="136" y2="80" stroke="rgba(34, 197, 94, 0.7)" stroke-width="2" stroke-linecap="round" class="radar-sweep" />
+                <defs>
+                    <linearGradient id="sentinel-grad-1" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#22c55e" />
+                        <stop offset="0.5" stop-color="#06b6d4" />
+                        <stop offset="1" stop-color="#ef4444" />
+                    </linearGradient>
+                    <linearGradient id="sentinel-grad-2" x1="160" y1="0" x2="0" y2="160" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#06b6d4" />
+                        <stop offset="1" stop-color="#22c55e" />
+                    </linearGradient>
+                    <radialGradient id="sentinel-radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80 86) rotate(90) scale(42)">
+                        <stop stop-color="#22c55e" stop-opacity="0.3" />
+                        <stop offset="1" stop-color="#0a0a0a" stop-opacity="0.9" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </section>
 
     <main class="app-container">
         <div class="grid-layout">
